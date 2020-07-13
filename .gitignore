@@ -1,0 +1,6 @@
+.next
+node_modules
+.env.local
+credentials.json
+credentials-old.json
+notas.txt
