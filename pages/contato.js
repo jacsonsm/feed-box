@@ -15,5 +15,4 @@ const Contato = () => {
         </div>
     )
 }
-
 export default Contato
