@@ -1,18 +1,18 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet'
-
+import { fromBase64 } from '../../utils/base64'
 //import credentials from '../../credentials.json'
 
 //const doc = new GoogleSpreadsheet('')
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
 
-const fromBase64 = value => {
-    const buff = new Buffer.from(value, 'base64');
-    return buff.toString('ascii');
-}
+//const fromBase64 = value => {
+//   const buff = new Buffer.from(value, 'base64');
+//    return buff.toString('ascii');
+//}
 
 
 export default async (req, res) => {
-    console.log(fromBase64(process.env.SHEET_PRIVATE_KEY))
+    //console.log(fromBase64(process.env.SHEET_PRIVATE_KEY))
     //console.log(process.env.VAR1)
     try {
         //await doc.useServiceAccountAuth(credentials)
