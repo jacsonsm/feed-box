@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import Link from 'next/link'
 
+
 const Header = () => {
     return (
         <React.Fragment>
@@ -9,21 +10,25 @@ const Header = () => {
                 <div className='container mx-auto'>
                     <Link href='/'>
                         <a>
-                            <img className='mx-auto' src='/box2.png' alt='Feed Box' />
+                            <img className='mx-auto cursor-pointer' src='/box2.png' alt='Feed Box' />
                         </a>
                     </Link>
                 </div>
             </div>
-            <div className='bg-gray-300 p-4 shadow-md text-center'>
+            <div className='bg-gray-100 h-8 '>
+                <div className='container mx-auto text-center'>
                 <Link href='/Sobre'>
-                    <a className='px-2 hover:underline'>Sobre</a>
+                    <a className='p-2 hover:underline font-bold'>Sobre</a>
                 </Link>
+
                 <Link href='/contato'>
-                    <a className='px-2 hover:underline'>Contato</a>
+                    <a className='p-2 hover:underline font-bold'>Contato</a>
                 </Link>
+
                 <Link href='/pesquisa'>
-                    <a className='px-2 hover:underline'>Pesquisa</a>
+                    <a className='p-2 hover:underline font-bold'>Pesquisa</a>
                 </Link>
+                </div>
             </div>
         </React.Fragment>
     )

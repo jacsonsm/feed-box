@@ -4,7 +4,7 @@ import Head from 'next/head'
 const PageTitle = ({ title }) => {
     return (
         <Head>
-            <title>{title} - Feed Box</title>
+            <title>{ title } - Feed Box</title>
         </Head>
     )
 }

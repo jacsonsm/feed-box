@@ -1,42 +1,69 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
+//import Head from 'next/head'
 import PageTitle from '../components/PageTitle'
+import { Validation } from '../utils/validation'
 
 const Pesquisa = () => {
+
     const [form, setForm] = useState({
         Nome: '',
         Email: '',
         Whatsapp: '',
-        Sugestao:'',
+        Sugestao: '',
         Nota: 0
     })
-    const notas = [0, 1, 2, 3, 4, 5]
-    const [sucess, setSuccess] = useState(false)
-    const [retorno, setRetorno] = useState({})
-    const save = async () => {
-        try {
-            const response = await fetch('/api/save', {
-                method: 'POST',
-                body: JSON.stringify(form)
-            })
-            const data = await response.json()
-            //console.log(data)
-            setSuccess(true)
-            setRetorno(data)
-        } catch (err) {
 
-        }
-    }
-    const onChange = evt => {
-        const value = evt.target.value
-        const key = evt.target.name
+    const notas = [0, 1, 2, 3, 4, 5]
+
+    const onChange = event => {
+        const value = event.target.value
+        const key = event.target.name
+
+        //validaçao individual
+
         setForm(old => ({
             ...old,
-            [key]: value
+            [key]: value.trim()
 
         }))
     }
+
+    const [ sucess, setSuccess ] = useState(false)
+    const [ retorno, setRetorno ] = useState({})
+    const [valid, setValid] = useState({
+        status: true,
+        menssage: [0]
+    })
+
+    const save = async () => {
+        
+        //validação dos dados
+
+        const val = Validation(form)
+        setValid({
+            status: val.status,
+            menssage: val.menssage
+        })
+
+        if(val.status){
+        
+            try {
+                const response = await fetch('/api/save', {
+                    method: 'POST',
+                    body: JSON.stringify(form)
+                })
+                const data = await response.json()
+                //console.log(data)
+                setSuccess(true)
+                setRetorno(data)
+            } catch (err) {
+                console.log( 'METHOD SAVE ERROR:', err)
+            }
+        }
+    }
+    
     return (
+        <React.Fragment>
         <div className='pt-6'>
             <PageTitle title='Pesquisa' />
             <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
@@ -52,7 +79,7 @@ const Pesquisa = () => {
                 <label className='font-bold'>Whatsapp:</label>
                 <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
                 <label className='font-bold'>Sugestão de melhoria:</label>
-                <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Sugestão' onChange={onChange} name='Sugestao' value={form.Sugestao} />
+                <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Sugestao' onChange={onChange} name='Sugestao' value={form.Sugestao} />
                 <label className='font-bold'>Minha avaliação :</label>
                 <div className='flex py-6'>
                     {notas.map((nota, key) => {
@@ -85,7 +112,7 @@ const Pesquisa = () => {
 
             </div>}
         </div>
-
+        </  React.Fragment>
     )
 }
 
