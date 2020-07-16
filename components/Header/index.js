@@ -17,7 +17,7 @@ const Header = () => {
             </div>
             <div className='bg-gray-100 h-8 '>
                 <div className='container mx-auto text-center'>
-                <Link href='/Sobre'>
+                <Link href='/sobre'>
                     <a className='p-2 hover:underline font-bold'>Sobre</a>
                 </Link>
 
