@@ -159,8 +159,8 @@ const Pesquisa = () => {
                                        <div className='mx-auto text-center mt-4'>
                                            <div className='w-5/6 mx-auto text-center'>
                                            <label className='font-bold'>
-                                               Sim<input type='radio' name='sim' value='sim' onChange={onChange} /> ...
-                                               Não<input type='radio' name='nao' value='nao' onChange={onChange} />
+                                               Sim<input type='radio' name='sim' value='sim' onChange='' /> ...
+                                               Não<input type='radio' name='nao' value='nao' onChange=''/>
                                             </label>
                                             </div>
                                        </div>
