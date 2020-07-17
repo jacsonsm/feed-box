@@ -6,9 +6,10 @@ const Sobre = () => {
     return (
         <div className='mx-auto text-center mt-6'>
             <PageTitle title='Sobre' />
-            <h1>Feed Box é um programa de fidelidade que concede descontos e vantagens .</h1>                             
+            <h1>Feed-Box é um programa de pesquisa e analise de satisfação, que concede</h1>
+            <p> descontos e vantagens a clientes do estabelecimento comercial.</p>                             
             <p>Ao realizar a avaliação e deixar a sua opinião ou sugestão sobre o atendimento,</p> 
-            <p> Os clientes recebem em troca, cupons de descontos e vantagens.</p>          
+            <p> os clientes recebem em troca cupons de descontos e vantagens.</p>          
             {/*<div>
                 <Link href='/'>
                    <a>Home</a>
