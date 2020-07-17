@@ -7,7 +7,7 @@ const Footer = () => {
                 Projeto desenvolvido por: {' '}
                 <a className='hover:underline' href='https://www.linkedin.com/in/jacson-medeiros-4838553b/'> Jacson Medeiros </a> / {' '}
                 <a className='hover:underline' href='https://www.linkedin.com/in/jacson-medeiros-4838553b/'>Linkedin</a>  / {' '}
-                <a className='hover:underline' href='https://github.com/jacsonsm/'>Github</a> 
+                <a className='hover:underline' href='/'>Github</a> 
                 <div className='mt-2' >
                     <img className='mx-auto inline px-32' src='./' alt=''/>
                     <img className='mx-auto inline px-32' src='./' alt=''/>
