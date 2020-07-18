@@ -77,7 +77,7 @@ const Pesquisa = () => {
                         <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
                             <font style={{ verticalAlign: 'inherit' }}>
                                 <font style={{ verticalAlign: 'inherit' }}>
-                                    <p>Nós da "EMPRESA" buscamos sempre atender os nossos clientes da melhor forma possível.</p>
+                                    <p>Nós da "EMPRESA", buscamos sempre atender os nossos clientes da melhor forma possível.</p>
                                     <p>Por isso, sua opnião é muito importante para nós.</p>
                                 </font>
                             </font>
@@ -159,8 +159,8 @@ const Pesquisa = () => {
                                        <div className='mx-auto text-center mt-4'>
                                            <div className='w-5/6 mx-auto text-center'>
                                            <label className='font-bold'>
-                                               Sim<input type='radio' name='sim' value='sim' onChange='' /> ...
-                                               Não<input type='radio' name='nao' value='nao' onChange=''/>
+                                               Sim<input type='radio' name='sim' value='sim' onChange={onChange} /> ...
+                                               Não<input type='radio' name='nao' value='nao' onChange={onChange} />
                                             </label>
                                             </div>
                                        </div>
@@ -197,7 +197,7 @@ const Pesquisa = () => {
                                         <p className=''>10% pelo seu feedback</p>
                                     </div>
                                     <div className='mx-auto mb-2 px-4 py-4 text-center text-gray-700 bg-gray-200 border-t border-b border-gray-500'>
-                                        <p className='italic'>Tire um print ou foto desta tela e apresente ao garçom na sua proxima compra!</p>
+                                        <p className='italic'>Tire um print desta tela e apresente ao garçom na sua proxima compra!</p>
                                     </div>
                                 </div>
                             </div>
